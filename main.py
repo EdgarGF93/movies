@@ -24,7 +24,11 @@ class IMDB():
             except FileNotFoundError:
                 print("The file was not found.")
 
-    def n_movies(self):
-        rows = len(self.data)
-        print(f"The dataset contains {rows} movies: {rows / 1e6} millions.")
+    def number_movies(self):
+        n_movies = self.data.shape[0]
+        return n_movies
+
+    def number_columns(self):
+        n_columns = self.data.shape[1]
+        return n_columns
 
